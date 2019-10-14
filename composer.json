@@ -1,0 +1,15 @@
+{
+    "name": "molbal/AbbyyFlexiCapture",
+    "description": "Generated PHP SOAP client for ABBYY FlexiCapture v12 R2",
+    "require": {
+        "php": ">=5.3.3",
+        "ext-soap": "*",
+        "ext-mbstring": "*",
+        "wsdltophp/packagebase": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AbbyyBridge\\": "./src/"
+        }
+    }
+}

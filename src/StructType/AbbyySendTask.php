@@ -1,0 +1,161 @@
+<?php
+
+namespace AbbyyBridge\StructType;
+
+use \WsdlToPhp\PackageBase\AbstractStructBase;
+
+/**
+ * This class stands for SendTask StructType
+ * @package Abbyy
+ * @subpackage Structs
+ */
+class AbbyySendTask extends AbstractStructBase
+{
+    /**
+     * The sessionId
+     * @var int
+     */
+    public $sessionId;
+    /**
+     * The taskId
+     * @var int
+     */
+    public $taskId;
+    /**
+     * The stageId
+     * @var int
+     */
+    public $stageId;
+    /**
+     * The comment
+     * @var string
+     */
+    public $comment;
+    /**
+     * Constructor method for SendTask
+     * @uses AbbyySendTask::setSessionId()
+     * @uses AbbyySendTask::setTaskId()
+     * @uses AbbyySendTask::setStageId()
+     * @uses AbbyySendTask::setComment()
+     * @param int $sessionId
+     * @param int $taskId
+     * @param int $stageId
+     * @param string $comment
+     */
+    public function __construct($sessionId = null, $taskId = null, $stageId = null, $comment = null)
+    {
+        $this
+            ->setSessionId($sessionId)
+            ->setTaskId($taskId)
+            ->setStageId($stageId)
+            ->setComment($comment);
+    }
+    /**
+     * Get sessionId value
+     * @return int|null
+     */
+    public function getSessionId()
+    {
+        return $this->sessionId;
+    }
+    /**
+     * Set sessionId value
+     * @param int $sessionId
+     * @return \AbbyyBridge\StructType\AbbyySendTask
+     */
+    public function setSessionId($sessionId = null)
+    {
+        // validation for constraint: int
+        if (!is_null($sessionId) && !(is_int($sessionId) || ctype_digit($sessionId))) {
+            throw new \InvalidArgumentException(sprintf('Invalid value %s, please provide an integer value, %s given', var_export($sessionId, true), gettype($sessionId)), __LINE__);
+        }
+        $this->sessionId = $sessionId;
+        return $this;
+    }
+    /**
+     * Get taskId value
+     * @return int|null
+     */
+    public function getTaskId()
+    {
+        return $this->taskId;
+    }
+    /**
+     * Set taskId value
+     * @param int $taskId
+     * @return \AbbyyBridge\StructType\AbbyySendTask
+     */
+    public function setTaskId($taskId = null)
+    {
+        // validation for constraint: int
+        if (!is_null($taskId) && !(is_int($taskId) || ctype_digit($taskId))) {
+            throw new \InvalidArgumentException(sprintf('Invalid value %s, please provide an integer value, %s given', var_export($taskId, true), gettype($taskId)), __LINE__);
+        }
+        $this->taskId = $taskId;
+        return $this;
+    }
+    /**
+     * Get stageId value
+     * @return int|null
+     */
+    public function getStageId()
+    {
+        return $this->stageId;
+    }
+    /**
+     * Set stageId value
+     * @param int $stageId
+     * @return \AbbyyBridge\StructType\AbbyySendTask
+     */
+    public function setStageId($stageId = null)
+    {
+        // validation for constraint: int
+        if (!is_null($stageId) && !(is_int($stageId) || ctype_digit($stageId))) {
+            throw new \InvalidArgumentException(sprintf('Invalid value %s, please provide an integer value, %s given', var_export($stageId, true), gettype($stageId)), __LINE__);
+        }
+        $this->stageId = $stageId;
+        return $this;
+    }
+    /**
+     * Get comment value
+     * @return string|null
+     */
+    public function getComment()
+    {
+        return $this->comment;
+    }
+    /**
+     * Set comment value
+     * @param string $comment
+     * @return \AbbyyBridge\StructType\AbbyySendTask
+     */
+    public function setComment($comment = null)
+    {
+        // validation for constraint: string
+        if (!is_null($comment) && !is_string($comment)) {
+            throw new \InvalidArgumentException(sprintf('Invalid value %s, please provide a string, %s given', var_export($comment, true), gettype($comment)), __LINE__);
+        }
+        $this->comment = $comment;
+        return $this;
+    }
+    /**
+     * Method called when an object has been exported with var_export() functions
+     * It allows to return an object instantiated with the values
+     * @see AbstractStructBase::__set_state()
+     * @uses AbstractStructBase::__set_state()
+     * @param array $array the exported values
+     * @return \AbbyyBridge\StructType\AbbyySendTask
+     */
+    public static function __set_state(array $array)
+    {
+        return parent::__set_state($array);
+    }
+    /**
+     * Method returning the class name
+     * @return string __CLASS__
+     */
+    public function __toString()
+    {
+        return __CLASS__;
+    }
+}
