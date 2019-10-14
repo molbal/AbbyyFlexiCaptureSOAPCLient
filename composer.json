@@ -1,5 +1,5 @@
 {
-    "name": "molbal/AbbyyFlexiCapture",
+    "name": "molbal/abbyy-flexi-capture-soap-client",
     "description": "Generated PHP SOAP client for ABBYY FlexiCapture v12 R2",
     "require": {
         "php": ">=5.3.3",
